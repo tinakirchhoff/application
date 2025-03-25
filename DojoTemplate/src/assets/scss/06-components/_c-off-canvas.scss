@@ -1,0 +1,8 @@
+@use "../01-TOKENS" as TOKENS;
+
+$off-canvas-icon-size: TOKENS.$GLOBAL-ICON-SIZE-L !default;
+
+.c-off-canvas {
+	width: $off-canvas-icon-size;
+	height: $off-canvas-icon-size;
+}

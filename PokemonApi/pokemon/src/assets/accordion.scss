@@ -1,0 +1,31 @@
+.c-accordion {
+  text-align: left;
+
+  h3 {
+    color: #ffcb05;
+  }
+
+  a {
+    color: inherit;
+    transition: 100ms;
+
+    &:hover {
+      color: #f06a73;
+    }
+  }
+}
+
+.c-accordion__additional-info {
+  position: absolute;
+  top: 0;
+  right: -200px;
+  background-color: #192653;
+  padding: 12px;
+  border-bottom: 6px;
+  box-shadow: 0 0 16px 0 black;
+
+  p,
+  a {
+    color: #a6a6a6
+  }
+}

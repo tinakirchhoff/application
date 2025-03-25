@@ -1,0 +1,54 @@
+@use "../01-TOKENS" as TOKENS;
+
+//FONT
+$icon-card-text-transform: uppercase !default;
+$icon-card-font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-BOLDER !default;
+$icon-card-font-color: lighten(TOKENS.$GLOBAL-COLOR-SECONDARY, 10) !default;
+$icon-card-active-font-color: TOKENS.$GLOBAL-COLOR-LIGHT !default;
+
+//SPACING
+$icon-card-spacing: TOKENS.$GLOBAL-SPACING !default;
+$icon-card-size: 150px !default;
+
+//BACKGROUND
+$icon-card-background-color: darken(TOKENS.$GLOBAL-COLOR-LIGHT, 5) !default;
+$icon-card-active-background-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+//BORDER
+$icon-card-border: TOKENS.$GLOBAL-BORDER !default;
+$icon-card-box-shadow: TOKENS.$GLOBAL-BOX-SHADOW !default;
+
+//ETC
+$icon-card-icon-size: TOKENS.$GLOBAL-ICON-SIZE-XL !default;
+$icon-card-transition-time: 300ms !default;
+
+.c-icon-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	transition: $icon-card-transition-time;
+	box-shadow: $icon-card-box-shadow;
+	border: $icon-card-border;
+	box-sizing: border-box;
+	width: $icon-card-size;
+	height: $icon-card-size;
+	padding: $icon-card-spacing;
+	background-color: $icon-card-background-color;
+	cursor: pointer;
+	font-weight: $icon-card-font-weight;
+	text-align: center;
+	text-transform: $icon-card-text-transform;
+	color: $icon-card-font-color;
+
+	svg {
+		width: $icon-card-icon-size;
+		height: $icon-card-icon-size;
+		fill: currentColor;
+	}
+
+	&:hover {
+		background-color: $icon-card-active-background-color;
+		color: $icon-card-active-font-color;
+	}
+}

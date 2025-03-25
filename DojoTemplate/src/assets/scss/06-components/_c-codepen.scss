@@ -1,0 +1,17 @@
+@use "../01-tokens" as TOKENS;
+
+$codepen-height: 500px !default;
+$codepen-spacing: TOKENS.$GLOBAL-SPACING-L !default;
+$codepen-preview-bgc: TOKENS.$GLOBAL-COLOR-TERTIARY !default;
+
+.c-codepen__iframe {
+	margin-top: $codepen-spacing;
+	height: $codepen-height;
+}
+
+.c-codepen__preview {
+	margin-top: $codepen-spacing;
+	width: 100%;
+	height: $codepen-height;
+	background-color: $codepen-preview-bgc;
+}

@@ -1,0 +1,36 @@
+{
+  "member": {
+    "title": "How to add an member",
+    "list": [
+      "Hierfür einen Eintrag in der Datei 'members.json' hinzufügen",
+      "Dafür sollte die gegebene Struktur eingehalten werden",
+      "Derzeit werden nur Vornamen angezeigt um möglichst viele Chips anzuzeigen"
+    ]
+  },
+  "images": {
+    "title": "How to change the home-images",
+    "list": [
+      "Das jeweilige Bild unter dem Ordner homeImg ändern",
+      "In der Datei 'homeImgNames.json' den Namen des Bildes anpassen"
+    ]
+  },
+  "component": {
+    "title": "How to add an component",
+    "list": [
+      "Um eine neue Komponente hinzufügen begebe dich in 'components.json' Datei",
+      "Für eine fehlerfrei Darstellung werden folgende Angaben benötigt:",
+      [
+        "id (Name der Componente, kleingeschrieben)",
+        "difficulty (für welches Ausbildungsjahr geeignet?)",
+        "description (hier muss ein neues Array eröffnet werden, eine Eintrag = ein Akzeptanzkriterium)",
+        "accordions (hier muss ein neues Object eröffnet werden, Accordion.)",
+        "Art der Variante z.B. 'SCSS-Variante' angeben (neues Object eröffnen)",
+        "title (z.B. SCSS-JS-Variante, Accordion titel)",
+        "contentTitle (z.B. Klassisch, ist optional)",
+        "link (z.B. https://google.de, Musterbeispiel)"
+      ],
+      "Außerdem muss gegebenenfalls ein neues Icon unter 'Sprite.vue' hinzugefügt werden. (Id === id)",
+      "Und ein Screenshot der Komponente muss, unter dem Ordner detailImg, abgelegt werden. (Name des img === id)"
+    ]
+  }
+}

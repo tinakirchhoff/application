@@ -1,0 +1,79 @@
+@use "../01-tokens" as TOKENS;
+
+//FONT
+$button-font-size: TOKENS.$GLOBAL-FONT-SIZE !default;
+$button-font-size-link-style: TOKENS.$GLOBAL-FONT-SIZE-S !default;
+$button-font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-BOLDER !default;
+$button-letter-spacing: 1px !default; //Work around, weil font ist nicht die geforderte
+$button-text-transform: uppercase !default;
+$button-color: TOKENS.$GLOBAL-COLOR-LIGHT !default;
+$button-color-link-style: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+//SPACING
+$button-spacing-s: TOKENS.$GLOBAL-SPACING-XS !default;
+$button-spacing-m: TOKENS.$GLOBAL-SPACING-S !default;
+
+//BACKGROUND-COLOR
+$button-background-color: TOKENS.$GLOBAL-COLOR-DARK !default;
+$button-primary-background-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$button-link-style-background-color: transparent !default;
+
+//BORDER
+$button-width: 3px !default;
+$button-border: $button-width solid transparent !default;
+
+//ICON
+$button-icon-color: TOKENS.$GLOBAL-COLOR-LIGHT !default;
+$button-icon-size: TOKENS.$GLOBAL-ICON-SIZE-L !default;
+$button-icon-border-width: 5px !default;
+
+//STROKE
+$button-stroke-height: 3px !default;
+$button-stroke-width: 7% !default;
+$button-stroke-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+.c-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: $button-spacing-m;
+	border: $button-border;
+	box-sizing: border-box;
+	height: fit-content;
+	padding: $button-spacing-s $button-spacing-m;
+	background-color: $button-background-color;
+	cursor: pointer;
+	font-size: $button-font-size;
+	font-weight: $button-font-weight;
+	text-transform: $button-text-transform;
+	text-decoration: none;
+	letter-spacing: $button-letter-spacing;
+	color: $button-color;
+}
+
+.c-button__icon {
+	width: $button-icon-size;
+	height: $button-icon-size;
+	fill: $button-icon-color;
+}
+
+.c-button--primary {
+	background-color: $button-primary-background-color;
+}
+
+.c-button--stroke {
+	position: absolute;
+	left: -6%;
+	width: $button-stroke-width;
+	height: $button-stroke-height;
+	background-color: $button-stroke-color;
+}
+
+.c-button--link-style {
+	border: none;
+	background-color: $button-link-style-background-color;
+	font-size: $button-font-size-link-style;
+	text-decoration: underline;
+	color: $button-color-link-style;
+	padding: 0;
+}

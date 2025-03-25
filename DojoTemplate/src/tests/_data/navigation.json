@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://v2.vuejs.org/v2/style-guide/?redirect=true#Element-selectors-with-scoped-use-with-caution",
+    "head": "VUE JS Style Guide",
+    "target": "_blank",
+    "active": true,
+    "sublevel": false
+  },
+  {
+    "url": "https://vuejs.org/examples/#hello-world",
+    "head": "VUE JS Examples",
+    "target": "_blank",
+    "active": false,
+    "sublevel": true
+  },
+  {
+    "url": "https://vuejs.org/api/sfc-script-setup.html",
+    "head": "VUE JS 3 + setup",
+    "target": "_blank",
+    "active": false,
+    "sublevel": false
+  }
+]

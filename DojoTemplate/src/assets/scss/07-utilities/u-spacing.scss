@@ -1,0 +1,22 @@
+@use "../01-TOKENS" as TOKENS;
+
+$padding-top: TOKENS.$GLOBAL-SPACING !default;
+$padding-bottom: TOKENS.$GLOBAL-SPACING-L !default;
+$margin-top: TOKENS.$GLOBAL-SPACING !default;
+$margin-bottom: TOKENS.$GLOBAL-SPACING-S !default;
+
+.u-pt {
+	padding-top: $padding-top !important;
+}
+
+.u-pb {
+	padding-bottom: $padding-bottom !important;
+}
+
+.u-mt {
+	margin-top: $margin-top !important;
+}
+
+.u-mb {
+	margin-bottom: $margin-bottom !important;
+}

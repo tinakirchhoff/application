@@ -1,0 +1,95 @@
+@use "../01-TOKENS" as TOKENS;
+
+//SPACING
+$toast-spacing-xs: TOKENS.$GLOBAL-SPACING-XS !default;
+$toast-spacing-s: TOKENS.$GLOBAL-SPACING-S !default;
+$toast-spacing: TOKENS.$GLOBAL-SPACING !default;
+$toast-spacing-l: TOKENS.$GLOBAL-SPACING-L !default;
+$toast-spacing-xl: TOKENS.$GLOBAL-SPACING-XL !default;
+
+//TOAST
+$toast-position-bottom-spacing: 120px !default;
+$toast-position-right-spacing: 320px !default;
+$toast-width: 200px !default;
+$toast-background-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$toast-background-color-dark: darken(TOKENS.$GLOBAL-COLOR-PRIMARY, 10) !default;
+$toast-font-color: TOKENS.$GLOBAL-COLOR-LIGHT !default;
+$toast-font-size: 1.2rem !default;
+$toast-transition: 300ms !default;
+
+//FLAG
+$toast-flag-width: 8px !default;
+$toast-flag-height: 8px !default;
+$toast-flag-spacing: 16px !default;
+$toast-close-icon: TOKENS.$GLOBAL-ICON-SIZE !default;
+$toast-flag-icon: TOKENS.$GLOBAL-ICON-SIZE-L !default;
+$toast-flag-icon-color: TOKENS.$GLOBAL-COLOR-LIGHT !default;
+
+.c-toast {
+	position: fixed;
+	z-index: 99;
+	right: $toast-position-right-spacing;
+	bottom: $toast-position-bottom-spacing;
+	transition: $toast-transition;
+	color: $toast-font-color;
+
+	&.is-hidden {
+		right: -10%;
+	}
+}
+
+.c-toast__flag {
+	position: absolute;
+	top: -$toast-spacing-s;
+	left: $toast-spacing-s;
+}
+
+.c-toast__icon-container {
+	position: relative;
+	z-index: 99;
+	padding: $toast-spacing $toast-spacing-xs;
+	width: fit-content;
+	background-color: $toast-background-color-dark;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -$toast-flag-spacing;
+		left: 0;
+		border-width: $toast-flag-spacing $toast-flag-width;
+		border-style: solid;
+		border-color: transparent transparent transparent $toast-background-color-dark;
+		width: $toast-flag-width;
+		height: $toast-flag-height;
+	}
+}
+
+.c-toast__icon {
+	width: $toast-flag-icon;
+	height: $toast-flag-icon;
+	fill: $toast-flag-icon-color;
+}
+
+.c-toast__content {
+	position: absolute;
+	padding: $toast-spacing-l $toast-spacing $toast-spacing-l 72px;
+	width: $toast-width;
+	background-color: $toast-background-color;
+	font-size: $toast-font-size;
+}
+
+.c-toast__close {
+	position: absolute;
+	z-index: 99;
+	top: $toast-spacing-xs;
+	right: $toast-spacing-xs;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+
+	svg {
+		height: $toast-close-icon;
+		width: $toast-close-icon;
+		fill: $toast-font-color;
+	}
+}

@@ -1,0 +1,14 @@
+@use "../01-tokens" as TOKENS;
+
+$flex-gap: TOKENS.$GLOBAL-SPACING !default;
+$flex-gap-s: TOKENS.$GLOBAL-SPACING-S !default;
+
+.o-flex {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $flex-gap;
+}
+
+.o-flex--gap-s {
+	gap: $flex-gap-s;
+}

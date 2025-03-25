@@ -1,0 +1,142 @@
+@use "../01-TOKENS" as TOKENS;
+
+//BORDER
+$card-border: TOKENS.$GLOBAL-BORDER !default;
+$card-box-shadow: TOKENS.$GLOBAL-BOX-SHADOW !default;
+
+//SPACING
+$card-spacing: TOKENS.$GLOBAL-SPACING-S !default;
+$card-spacing-s: TOKENS.$GLOBAL-SPACING-XS !default;
+$card-header-height: 100px !default;
+$card-headline-spacing: 25% $card-spacing $card-spacing $card-spacing !default;
+$card-icon-size: TOKENS.$GLOBAL-ICON-SIZE-L !default;
+
+//COLOR
+$card-background-color: TOKENS.$GLOBAL-COLOR-LIGHT !default;
+$card-headline-background-color: linear-gradient(0deg, TOKENS.$GLOBAL-COLOR-LIGHT 10%, transparent 100%) !default;
+
+//HOVER
+$card-border-hover: TOKENS.$GLOBAL-BORDER-HOVER !default;
+$card-transition-time: 300ms !default;
+
+//OPEN
+$card-headline-size: TOKENS.$GLOBAL-FONT-SIZE !default;
+$card-img-size: 20vh !default;
+
+.c-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	transform: rotateY(0);
+	overflow: hidden;
+	transition: $card-transition-time;
+	box-shadow: $card-box-shadow;
+	border: $card-border;
+	height: 50vh;
+	background-color: $card-background-color;
+	cursor: pointer;
+
+	&:hover {
+		box-shadow: $card-border-hover;
+	}
+}
+
+.c-card__body {
+	transform: rotateY(180deg);
+	overflow: hidden;
+	height: 33%;
+	padding: $card-spacing-s;
+}
+
+.c-card__dots {
+	display: none;
+}
+
+.c-card__header {
+	position: relative;
+	flex: 1;
+	height: $card-header-height;
+}
+
+.c-card__media {
+	height: 100%;
+	width: 100%;
+	object-fit: cover
+}
+
+.c-card__headline {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	gap: $card-spacing;
+	padding: $card-headline-spacing;
+	background: $card-headline-background-color;
+}
+
+.c-card__icon {
+	width: $card-icon-size;
+	height: $card-icon-size;
+}
+
+.c-card__list {
+	margin-top: $card-spacing;
+	padding: 0;
+}
+
+.c-card-list__item {
+	list-style: none;
+}
+
+.c-card__button {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+
+	button {
+		width: 100%
+	}
+}
+
+.c-card.is-open {
+	transform: rotateY(180deg);
+
+	.c-card__header {
+		display: contents;
+	}
+
+	.c-card__media {
+		transform: rotateY(180deg);
+		height: $card-img-size;
+	}
+
+	.c-card__headline {
+		position: static;
+		transform: rotateY(180deg);
+		padding-top: $card-spacing;
+
+		h2 {
+			font-size: $card-headline-size;
+		}
+	}
+
+	.c-card__icon {
+		display: none;
+	}
+
+	.c-card__button {
+		display: block;
+		transform: rotateY(180deg);
+	}
+
+	.c-card__dots {
+		display: block;
+		align-self: center;
+		font-weight: bold;
+		letter-spacing: 2px;
+	}
+}

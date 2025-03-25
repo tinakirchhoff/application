@@ -1,0 +1,8 @@
+[
+  {"id": 0, "name" : "member1", "variant": "default"},
+  {"id": 1, "name" : "member2", "variant": "default"},
+  {"id": 2, "name" : "member3", "variant": "default"},
+  {"id": 3, "name" : "member4", "variant": "default"},
+  {"id": 4, "name" : "member5", "variant": "default"},
+  {"id": 5, "name" : "member6", "variant": "default"}
+]

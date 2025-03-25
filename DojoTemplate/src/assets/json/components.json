@@ -1,0 +1,369 @@
+{
+  "card": {
+    "id": "card",
+    "difficulty": "Erstes Ausbildungsjahr",
+    "description": [
+      "Erstelle eine flexible UI-Komponente mit folgendem Inhalt:",
+      "Einem Kuh-Bild, welches sich im oberen Bereich befindet",
+      "Einer Überschrift unter dem Bild",
+      "Einem Autor, z.B Marry Winkler"
+    ],
+    "accordions": [
+      {
+        "title": "SCSS-Variante",
+        "contentTitle": "SCSS only",
+        "link": "https://www.w3schools.com/howto/howto_css_cards.asp"
+      }
+    ]
+  },
+  "form": {
+    "id": "form",
+    "difficulty": "Erstes und Zweites Ausbildungsjahr",
+    "description": [
+      "Formular in zweispaltigen Raster",
+      "Input Text Felder",
+      "Dropdown",
+      "Radio Buttons",
+      "Checkboxes",
+      "Feld für Mitteilungen",
+      "Absenden Button"
+    ],
+    "accordions": [
+      {
+        "title": "SCSS-Variante",
+        "contentTitle": "HTML-SCSS only",
+        "link": "https://www.w3docs.com/tools/editor/5967"
+      },
+      {
+        "title": "JS-SCSS-Variante",
+        "contentTitle": "Mit Eingabefeld",
+        "link": "https://www.geeksforgeeks.org/how-to-create-a-chips-component-using-html-css-javascript/"
+      }
+    ]
+  },
+  "chips": {
+    "id": "chips",
+    "difficulty": "Erstes Ausbildungsjahr",
+    "description": [
+      "HTML und CSS erstellen",
+      "JS Funktionen:",
+      "Löschen eines Chips ('X' Button).",
+      "Input Text, mit denen ein neuer Chip hinzugefügt werden kann. Dazu ein Select mit dem die Farbe gewählt werden kann. Und ein Button - klick auf diesen fügt den neuen Chip ans Ende der Chip Liste hinzu.",
+      "Taste 'Entf' entfernt alle Chips bis auf den ersten Chip (bei Vue: 'keyup.delete')"
+    ],
+    "accordions": [
+     {
+        "title": "HTML-SCSS-Variante",
+        "contentTitle": "SCSS only",
+        "link": "https://www.w3schools.com/howto/howto_css_contact_chips.asp"
+      }
+    ]
+  },
+  "dropdown": {
+    "id": "dropdown",
+    "difficulty": "Zweites und Drittes Ausbildungsjahr",
+    "homeImg": "fourth.png",
+    "description": [
+      "Navigation Ebene 1 hat drei Einträge mit Verlinkung\n",
+      "Eine Verlinkung öffnet einen neuen Tab\n",
+      "Ein Eintrag hat eine weitere Navigation Ebene 2 und kennzeichnet diese mit einem Pfeil\n",
+      "Navigation Ebene 2 hat drei weitere Einträge mit Verlinkungen\n",
+      "Navigation Ebene 2 ist per default nicht sichtbar\n",
+      "Bei Hoher und Fokus öffnet sich die Navigation Ebene 2\n"
+    ],
+    "accordions": [
+      {
+        "title": "SCSS-Variante",
+        "contentTitle": "SCSS only",
+        "link": "https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp"
+      }
+    ]
+  },
+  "modal": {
+    "id": "modal",
+    "difficulty": "Erstes und Zweites Ausbildungsjahr",
+    "homeImg": "fifth.png",
+    "description": [
+      "Baue ein Modal, welches inital geschlossen ist. Ein Button öffnet das Modal.",
+      "Ist es geöffnet, wird der Inhalt hinter dem Modal abgedunkelt. Rechts oben (Icon) und im Footer (Button) gibt es jeweils Buttons, die das Modal schließen.",
+      "Hinweis: Das Markup soll beliebig im DOM platzierbar sein."
+    ],
+    "accordions": [
+      {
+        "title": "SCSS-Variante",
+        "contentTitle": "SCSS only",
+        "link": "https://dev.to/mandrewdarts/css-only-modal-using-target-5ac7"
+      },
+      {
+        "title": "SCSS-JS-Variante",
+        "contentTitle": "Klassisch (SCSS + JS)",
+        "link": "https://www.w3schools.com/howto/howto_css_modals.asp"
+      }
+    ]
+  },
+  "dom": {
+    "id": "dom",
+    "difficulty": "Erstes und Zweites Ausbildungsjahr",
+    "description": [
+      "Bei Klick auf den Button \"Noch ein Grid Item\" soll ein weiteres Grid Item mit einem Default Text in das bestehende Grid eingefügt werden\n",
+      "Bei Klick auf den Button \"Ein Grid Item weniger\" soll das letzte Grid Item entfernt werden\n",
+      "Es soll der Text aus dem Input Feld entnommen werden und in das neue Grid Item eingesetzt werden",
+      "Es soll nur ein Item entfernt werden, wenn auch wirklich mindestens eins existiert (damit keine Fehlermeldung in der Console steht)\n",
+      "Es soll für jedes neue Grid Item eine Farbklasse gesetzt werden. Diese Klasse gibt das Dropdown \"Farbe wählen\" vor. Wenn also \"red\" gewählt wird, soll die CSS Klasse red dem Grid Item hinzugefügt werden (und im CSS dann entsprechend gestylt (z.B. Hintergrundfarbe oder Border)\n"
+    ],
+    "accordions": [
+     {
+        "title": "SCSS-JS-Variante",
+        "contentTitle": "SCSS only",
+        "link": "https://codepen.io/jessef/pen/ExKNoWW?editors=1000"
+      }
+      ]
+  },
+  "accordion": {
+    "id": "accordion",
+    "difficulty": "Erstes und Zweites Ausbildungsjahr",
+    "description": [
+      "Gegeben ist ein CodePen bestehend aus HTML-Template und CSS <a href='https://codepen.io/kbark/pen/mdWjKLp'",
+      "Schreibe das Javascript für die \"Standard\" Funktionalität; bei Klick auf einen Title öffnet sich das Accordion. Ein Erneuter Klick schließt es. Es können beliebig viele Items gleichzeitig geöffnet sein.",
+      "Es soll nur noch ein Item zur Zeit geöffnet werden können. Ist bereits eins geöffnet, muss sich dieses erst schließen, bevor sich das neue öffnen darf.\nc) Der Button \"Toggle all\" soll bei Klick sämtliche Items öffnen oder",
+      "Der Button \"Toggle all\" soll bei Klick sämtliche Items öffnen oder schließen (unabhängig vom aktuellen Zustand der einzelnen Items)",
+      "Bei einem Doppelklick (gesamtes Accordion Element) soll erst der Modifier \"accordion--large\" und bei einem erneuten Doppelklick \"accordion--secondary\" hinzugefügt werden."
+    ],
+    "accordions": [
+      {
+        "title": "SCSS-Variante",
+        "contentTitle": "SCSS only",
+        "link": "https://www.hongkiat.com/blog/css-only-accordion/"
+      },
+      {
+        "title": "SCSS-JS-Variante",
+        "contentTitle": "Klassisch (SCSS + JS)",
+        "link": "https://www.w3schools.com/howto/howto_js_accordion.asp"
+      }
+    ]
+  },
+  "tooltip": {
+    "id": "tooltip",
+    "difficulty": "Erstes und Zweites Ausbildungsjahr",
+    "description": [
+      "Bei Hover auf das Icon mit Text soll ein Tooltip erscheinen, in dem weiterer Inhalt angezeigt wird (z.B. Aufzählung von Skills oder Hobbies).",
+      "Ein Dreieck zeigt als Indikator den Ursprung des Tooltips. Die Ausrichtung des Tooltips kann dabei variieren (oben, rechts, links oder unten).",
+      "Hinweis: Die Positionierung muss nicht während der Laufzeit passieren, z.B. aufgrund des verfügbaren Platzes. Die Ausrichtung kann z.B. per Klasse im Markup gesetzt werden."
+    ],
+    "accordions": [
+     {
+        "title": "SCSS-Variante",
+        "contentTitle": "SCSS only",
+        "link": "https://www.w3schools.com/css/css_tooltip.asp"
+      },
+  {
+        "title": "SCSS-Data-Attributes",
+        "contentTitle": "SCSS mit Data Attribute",
+        "link": "https://www.pixelbar.be/blog/css-profi-tip-tooltip-attributen/"
+      }
+    ]
+    },
+  "slider": {
+    "id": "slider",
+    "difficulty": "Zweites und Drittes Ausbildungsjahr",
+    "description": [
+      "Es soll ein einfacher Slider erstellt werden",
+      "Es soll 1 aktives Bild geben, aber in der Summe mehrere (z.B. 4 - die allerdings erst sichtbar werden, wenn sie durch die Pfeil-Buttons aktiviert werden), damit sie \"geslidet\" werden können",
+      "Zurück / Weiter Buttons"
+    ],
+    "accordions": [
+      {
+        "title": "SCSS-JS-Variante",
+        "contentTitle": "Klassisch (SCSS + JS)",
+        "link": "https://www.w3schools.com/howto/howto_js_slideshow.asp"
+      }
+      ]
+  },
+  "spinner": {
+    "id": "spinner",
+    "difficulty": "Zweites und Drittes Ausbildungsjahr",
+    "description": [
+      "Es soll ein einfacher Spinner erstellt werden",
+      "Der Spinner soll mit keyframes erstellt werden, dafür wird SCSS benötigt",
+      "Der Spinner soll endlos im Kreis drehen"
+    ],
+    "accordions": [
+      {
+        "title": "SCSS-Variante",
+        "contentTitle": "Klassisch (SCSS)",
+        "link": "https://codepen.io/mrrocks/pen/ExLovj"
+      }
+    ]
+  },
+  "toggle": {
+    "id": "toggle",
+    "difficulty": "Zweites und Drittes Ausbildungsjahr",
+    "description": [
+      "Es soll ein Toogle erstellen werden der beim Click aktiviert wird",
+      "Beim Aktivieren ändert sich die Hintergrundfarbe des Toggles",
+      "Außerdem bewegt sich der Schalter nach Links"
+    ],
+    "accordions": [
+     {
+        "title": "HTML SCSS",
+        "contentTitle": "Klassisch (SCSS)",
+        "link": "https://codepen.io/hmufti/pen/gmRXMe/"
+      }
+    ]
+  },
+  "toast": {
+    "id": "toast",
+    "difficulty": "Erstes und Zweites Ausbildungsjahr",
+    "description": [
+      "Eine Art von Benachrichtigung, die in einer Ebene über anderen Inhalten angezeigt wird und optisch einer mobilen oder Desktop-Push-Benachrichtigung ähnelt.",
+      "Der Toast soll von der rechten Seite hereinfliegen",
+      "Außerdem soll ein Icon und eine X zum Schließen enthalten sein"
+    ],
+    "accordions": [
+      {
+        "title": "HTML SCSS",
+        "contentTitle": "Klassisch (SCSS)",
+        "link": "https://getbootstrap.com/docs/4.3/components/toasts/"
+      }
+    ]
+  },
+  "button": {
+    "id": "button",
+    "difficulty": "Erstes und Zweites Ausbildungsjahr",
+    "description": [
+      "Ein Button soll erstellt werden",
+      "Der Button soll ein Icon beinhalten",
+      "Außerdem soll es mehrere Varianten geben (z.B. eine Ghost-Variante)"
+    ],
+    "accordions": [
+      {
+        "title": "HTML SCSS",
+        "contentTitle": "Klassisch (SCSS)",
+        "link": "https://getbootstrap.com/docs/4.3/components/buttons/"
+      }
+    ]
+  },
+  "navigation": {
+    "id": "navigation",
+    "difficulty": "Erstes und Zweites Ausbildungsjahr",
+    "description": [
+      "Erstelle eine Navigation mit mindestens 3 Menüpunkten",
+      "Beim Hovern auf einem Menüpunkt soll eine Animation erscheinen"
+    ],
+    "accordions": [
+     {
+        "title": "HTML SCSS",
+        "contentTitle": "Klassisch (SCSS)",
+        "link": "https://codepen.io/EvyatarDa/pen/waKXMd"
+      }
+    ]
+  },
+  "breadcrumb": {
+    "id": "breadcrumb",
+    "difficulty": "Erstes und Zweites Ausbildungsjahr",
+    "description": [
+      "Erstelle eine Breadcrumb Componente",
+      "Arbeite mit dem After-Element"
+    ],
+    "accordions": [
+      {
+        "title": "HTML SCSS",
+        "contentTitle": "Klassisch (SCSS)",
+        "link": "https://getbootstrap.com/docs/5.0/components/breadcrumb/"
+      }
+    ]
+  },
+  "divider": {
+    "id": "divider",
+    "difficulty": "Erstes und Zweites Ausbildungsjahr",
+    "description": [
+      "Erstelle einen Divider der sowohl Vertical als auch Horizontal funktioniert",
+      "Außerdem soll wahlweise Abstände gegeben werden"
+    ],
+    "accordions": [
+      {
+        "title": "HTML SCSS",
+        "contentTitle": "Klassisch (SCSS)",
+        "link": "https://getbootstrap.com/docs/5.0/components/dividerA/"
+      }
+    ]
+  },
+  "swiper": {
+    "id": "swiper",
+    "difficulty": "Zweites Ausbildungsjahr",
+    "description": [
+      "Bringe das 3d Party Plugin \"Swiper\" in deinem Code Pen zu laufen",
+      "versuche unterschiedliche Varianten des Swiper auszugeben",
+      "verändere mit Custom Styles das Aussehen der Komponente",
+      "Tausche die Farben der Pfeile und Dots aus"
+    ],
+    "accordions": [
+      {
+        "title": "Navigation & Loop",
+        "contentTitle": "Variante 1",
+        "link": "https://swiperjs.com/demos/020-navigation/core"
+      },
+      {
+        "title": "Pagination & Loop",
+        "contentTitle": "Variante 2",
+        "link": "https://swiperjs.com/demos/030-pagination/core"
+      },
+      {
+        "title": "Thumbs Gallery ohne Loop",
+        "contentTitle": "Variante 3",
+        "link": "https://swiperjs.com/demos/300-thumbs-gallery/core"
+      }
+    ]
+  },
+  "miniQuiz": {
+    "id": "miniQuiz",
+    "difficulty": "Erstes Ausbildungsjahr",
+    "description": [
+      "Erstelle ein HTML Template mit Quiz Fragen.",
+      "Es sollen mindestens folgende Eingabefelder abgedeckt werden:  <select> <input type=\"radio\" /> <input type=\"checkbox\" />",
+      "Jedes Eingabefeld soll je nach gewählter Antwort einen Wert (Punkt) liefern.",
+      "Beim korrekt gewählter Antwort gibt es jeweils 1 Punkt. Bei Fragen, die mehrere richtige Antworten haben, gibt es mehrere Punkte (pro Checkbox 1 Punkt).",
+      "Nach Klick auf einen \"Absenden\" Button soll die Gesamtpunktzahl addiert werden und anschließend eine \"hübsch formatierte Ausgabe angezeigt werden.",
+      "Es soll je nach Punktzahl ein anderer Text ausgegeben werden. ",
+      "z.B. 0 Punkte = Text A, 1-5 Punkte = Text B, 6 Punkte = Text C."
+    ],
+    "accordions": []
+  },
+  "währung": {
+    "id": "währung",
+    "difficulty": "Erstes Ausbildungsjahr",
+    "description": [
+      "USD: 1,09 = 1€",
+      "JYN:  140,36 = 1€",
+      "CNY: 7,35 = 1€",
+      "NOK: 10,95 = 1€",
+      "DKK: 7,44 = 1€",
+      "PLN: 4,69 = 1€",
+      "Erstelle ein Formular für die Umrechnung von eine beliebigen Summe der Fremdwährung in Euro.",
+      "Verwende dazu eine Eingabefeld für die Eingabe der Summe, ein Select-Element zur Auswahl der Währung und einen Eingabe-Button Ausführung der Umrechnung."
+    ],
+    "accordions": []
+  },
+  "produktliste": {
+    "id": "produktliste",
+    "difficulty": "Erstes Ausbildungsjahr",
+    "description": [
+      "Daten sollen iteriert werden und unterschiedliche Inhalte enthalten. Es sollen nicht alle Daten an jeder Kachel gezeigt werden",
+      "Produktbild",
+      "Artikelname",
+      "Artikelart",
+      "Preis",
+      "Streichpreis",
+      "Produktfarben",
+      "Label Neu",
+      "Label Sale"
+    ],
+    "accordions": [
+      {
+        "title": "TWIG",
+        "contentTitle": "About You",
+        "link": "https://twigfiddle.com/"
+      }
+    ]
+  }
+}

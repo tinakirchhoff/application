@@ -1,0 +1,6 @@
+@use "../01-tokens" as TOKENS;
+
+.o-page-wrapper {
+	padding-right: TOKENS.$GLOBAL-PAGE-WRAPPER;
+	padding-left: TOKENS.$GLOBAL-PAGE-WRAPPER;
+}

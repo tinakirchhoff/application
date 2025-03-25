@@ -1,0 +1,13 @@
+.o-grid {
+  display: grid;
+}
+
+.o-grid--half {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 48px;
+}
+
+.o-grid--fourth {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 48px;
+}

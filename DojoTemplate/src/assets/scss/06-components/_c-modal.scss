@@ -1,0 +1,56 @@
+@use "../01-TOKENS" as TOKENS;
+
+$modal-bgc: rgba(0, 0, 0, 0.7) !default;
+$modal-content-bgc: TOKENS.$GLOBAL-COLOR-LIGHT !default;
+$modal-spacing-s: TOKENS.$GLOBAL-SPACING-S !default;
+$modal-spacing: TOKENS.$GLOBAL-SPACING !default;
+$modal-spacing-l: TOKENS.$GLOBAL-SPACING-XL !default;
+$modal-icon-size: TOKENS.$GLOBAL-ICON-SIZE-L !default;
+
+.c-modal {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 100vh;
+	background-color: $modal-bgc;
+
+	h3 {
+		margin: $modal-spacing-s 0 0 0;
+	}
+}
+
+.c-modal__content {
+	position: absolute;
+	z-index: 101;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	overflow-y: scroll;
+	width: 60%;
+	height: 100vh;
+	padding: $modal-spacing-l;
+	background-color: $modal-content-bgc;
+
+	h2 {
+		padding-bottom: $modal-spacing;
+	}
+}
+
+.c-modal__icon {
+	width: $modal-spacing;
+	height: $modal-spacing;
+	cursor: pointer;
+}
+
+.c-modal__close {
+	position: absolute;
+	top: $modal-spacing;
+	right: $modal-spacing;
+	width: $modal-icon-size;
+	height: $modal-icon-size;
+	cursor: pointer;
+}
+
+

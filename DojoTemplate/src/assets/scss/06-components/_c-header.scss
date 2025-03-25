@@ -1,0 +1,22 @@
+@use "../01-TOKENS" as TOKENS;
+
+$header-spacing: TOKENS.$GLOBAL-SPACING !default;
+$header-logo-neusta-height: 50px !default;
+$header-logo-neusta-width: 58px !default;
+$header-logo-dojo-height: 60px !default;
+$header-logo-dojo-width: 177px !default;
+
+.c-header {
+	padding-top: $header-spacing;
+}
+
+.c-header__logo-neusta {
+	width: $header-logo-neusta-width;
+	height: $header-logo-neusta-height;
+}
+
+.c-header__logo-dojo {
+	justify-self: center;
+	width: $header-logo-dojo-width;
+	height: $header-logo-dojo-height;
+}

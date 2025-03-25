@@ -1,0 +1,65 @@
+@use "../01-tokens" as TOKENS;
+
+body {
+	margin: 0;
+	font-size: TOKENS.$GLOBAL-FONT-SIZE;
+	font-family: TOKENS.$GLOBAL-FONT-FAMILY;
+	font-weight: TOKENS.$GLOBAL-FONT-WEIGHT;
+	color: TOKENS.$GLOBAL-FONT-COLOR;
+}
+
+main {
+	position: relative;
+	min-height: 60vh;
+}
+
+label {
+	font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-BOLDER;
+	color: TOKENS.$GLOBAL-COLOR-PRIMARY;
+}
+
+input,
+textarea {
+	box-sizing: border-box;
+	box-shadow: -1px 2px 8px 1px TOKENS.$GLOBAL-COLOR-GREY;
+	border: 1px solid TOKENS.$GLOBAL-COLOR-SECONDARY;
+	border-radius: TOKENS.$GLOBAL-SPACING-XS;
+	outline: none;
+	width: 100%;
+	padding: TOKENS.$GLOBAL-SPACING-S;
+}
+
+.background-pattern {
+	position: absolute;
+	z-index: -2;
+	right: -2%; //pagewrapper
+	left: -2%; //pagewrapper
+ 	height: 25vh;
+	background-image: TOKENS.$GLOBAL-BACKGROUND-PATTERN-GREY;
+}
+
+.background-pattern-top {
+	top: -20px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: linear-gradient(to top, rgba(255, 255, 255, 255), rgba(255,255,255,0));
+	}
+}
+
+.background-pattern-bottom {
+	bottom: 0;
+
+	&:before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 255), rgba(255,255,255,0));
+	}
+}
+
+img {
+	width: 100%;
+}

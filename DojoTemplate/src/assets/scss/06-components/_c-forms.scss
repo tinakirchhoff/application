@@ -1,0 +1,22 @@
+@use "../01-TOKENS" as TOKENS;
+
+$form-spacing: TOKENS.$GLOBAL-SPACING !default;
+$form-spacing-s: TOKENS.$GLOBAL-SPACING-S !default;
+
+.c-form {
+	display: flex;
+	flex-direction: column;
+	gap: $form-spacing-s;
+	padding-top: $form-spacing;
+}
+
+.c-form__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: $form-spacing-s;
+}
+
+.c-form__column {
+	width: 100%;
+}

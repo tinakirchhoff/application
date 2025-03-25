@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "pokemon";
+  src: url("../assets/fonts/pokemon.ttf") format('truetype'),
+  url("../assets/fonts/pokemon.woff") format('woff'),
+  url("../assets/fonts/pokemon.woff2") format('woff2');
+}
+
+.c-watchlist__icon {
+  width: 48px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+}
+
+.c-watchlist__icon-number {
+  background-color: #f06a73;
+  padding: 6px;
+  border-radius: 25%;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  font-size: 0.7rem;
+}
+
+
+.c-watchlist__content {
+  background-color: #1d2023;
+  min-height: 90vh;
+  width: 90vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  padding-inline: 48px;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px 3px #1d2023;
+  z-index: 99;
+
+}
+
+.c-watchlist__headline {
+  text-align: center;
+  font-family: "pokemon", serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  letter-spacing: 4px;
+  color: #ffcb05;
+  margin: 0;
+  text-shadow: -3px -3px 0 #2a73b4, 3px -3px 0 #2a73b4, -3px 3px 0 #2a73b4, 3px 3px 0 #2a73b4;
+}
+
+.c-watchlist__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transform: translate(-50%);
+  font-size: 1.5rem;
+  cursor: pointer
+}
+
+.c-watchlist__list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  text-align: center;
+}
+
+.c-watchlist__item {
+  outline: 2px solid #192653;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  padding: 12px;
+  box-sizing: border-box;
+
+  &:first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.c-watchlist__item-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
+.c-watchlist__details {
+  position: absolute;
+  top: 15vh;
+  left: 35%;
+}

@@ -1,0 +1,87 @@
+@use "../01-tokens" as TOKENS;
+
+//BORDER
+$accordion-border: TOKENS.$GLOBAL-BORDER !default;
+$accordion-box-shadow: TOKENS.$GLOBAL-BOX-SHADOW !default;
+
+//SPACING
+$accordion-spacing: TOKENS.$GLOBAL-SPACING !default;
+$accordion-spacing-s: TOKENS.$GLOBAL-SPACING-S !default;
+
+//HEADER
+$accordion-header-font-color: TOKENS.$GLOBAL-COLOR-LIGHT !default;
+$accordion-header-font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-BOLDER !default;
+$accordion-header-icon-size: TOKENS.$GLOBAL-ICON-SIZE !default;
+$accordion-header-bgc: TOKENS.$GLOBAL-COLOR-GREY !default;
+$accordion-header-open-bgc: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+//BODY
+$accordion-bgc: TOKENS.$GLOBAL-COLOR-LIGHT !default;
+$accordion-icon-size: TOKENS.$GLOBAL-ICON-SIZE-L !default;
+$accordion-icon-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+//ETC
+$accordion-transition-time: 300ms !default;
+$accordion-link-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+.c-accordion {
+	position: relative;
+	box-shadow: $accordion-box-shadow;
+	border: $accordion-border;
+	background-color: $accordion-bgc;
+
+	a {
+		color: $accordion-link-color;
+	}
+}
+
+.c-accordion__header {
+	display: flex;
+	gap: $accordion-spacing;
+	transition: $accordion-transition-time;
+	padding: $accordion-spacing-s;
+	background-color: $accordion-header-bgc;
+	cursor: pointer;
+	font-weight: $accordion-header-font-weight;
+
+	svg {
+		width: $accordion-header-icon-size;
+		height: $accordion-header-icon-size;
+		fill: currentColor;
+	}
+}
+
+.c-accordion__body {
+	padding: $accordion-spacing;
+
+	span {
+		display: block;
+		padding-bottom: TOKENS.$GLOBAL-SPACING-S;
+		font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-BOLDER;
+	}
+}
+
+.c-accordion__icon {
+	rotate: 180deg;
+	transition: $accordion-transition-time
+}
+
+.c-accordion__triangle {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: $accordion-icon-size;
+	height: $accordion-icon-size;
+	fill: $accordion-icon-color;
+}
+
+.is-open {
+	.c-accordion__header {
+		background-color: $accordion-header-open-bgc;
+		color: $accordion-header-font-color;
+	}
+
+	.c-accordion__icon {
+		rotate: 0deg;
+	}
+}

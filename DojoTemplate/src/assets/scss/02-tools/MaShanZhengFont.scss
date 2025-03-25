@@ -1,0 +1,11 @@
+//MA SHAN ZHENG FONT (TIMER)
+@font-face {
+	font-display: swap;
+	font-family: 'maShanZheng';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local('maShanZheng'),
+		url('../../assets/fonts/maShanZheng.woff2') format('woff2'),
+		url('../../assets/fonts/maShanZheng.ttf') format('truetype');
+}

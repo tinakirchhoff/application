@@ -1,0 +1,85 @@
+@use "../01-TOKENS" as TOKENS;
+
+//FONT
+$chip-text-transform: uppercase !default;
+$chip-font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-BOLDER !default;
+$chip-font-color: TOKENS.$GLOBAL-COLOR-SECONDARY !default;
+$chip-next-font-color: TOKENS.$GLOBAL-COLOR-LIGHT !default;
+$chip-active-font-color: TOKENS.$GLOBAL-COLOR-LIGHT !default;
+
+//SPACING
+$chip-spacing: TOKENS.$GLOBAL-SPACING-S !default;
+$chip-spacing-s: TOKENS.$GLOBAL-SPACING-XS !default;
+
+//BACKGROUND
+$chip-background-color: TOKENS.$GLOBAL-COLOR-TERTIARY !default;
+$chip-next-background-color: TOKENS.$GLOBAL-COLOR-SECONDARY !default;
+$chip-active-background-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+$chip-box-shadow: TOKENS.$GLOBAL-BOX-SHADOW !default;
+
+//ICON
+$chip-icon-size: TOKENS.$GLOBAL-ICON-SIZE !default;
+$chip-icon-size-s: TOKENS.$GLOBAL-ICON-SIZE-S !default;
+
+//BACKGROUND
+$chip-background-pattern: TOKENS.$GLOBAL-BACKGROUND-PATTERN-WHITE !default;
+
+.c-chip {
+	display: flex;
+	gap: $chip-spacing;
+	box-shadow: $chip-box-shadow;
+	width: fit-content;
+	padding: $chip-spacing;
+	background-color: $chip-background-color;
+	cursor: pointer;
+	font-weight: $chip-font-weight;
+	text-transform: $chip-text-transform;
+	color: $chip-font-color;
+}
+
+.c-chip__icon {
+	width: $chip-icon-size;
+	height: $chip-icon-size;
+	fill: currentColor;
+}
+
+.c-chip--primary {
+	background-color: $chip-active-background-color;
+	color: $chip-active-font-color;
+
+	&.c-chip--bg {
+		background-image: $chip-background-pattern
+	}
+}
+
+.c-chip--secondary {
+	background-color: $chip-next-background-color;
+	color: $chip-next-font-color;
+
+	&.c-chip--bg {
+		background-image: $chip-background-pattern
+	}
+}
+
+.c-chip--tertiary {
+	background-color: TOKENS.$GLOBAL-COLOR-GREY;
+	color: lighten(TOKENS.$GLOBAL-COLOR-SECONDARY, 25);
+}
+
+.o-flex--scroll-controls {
+	position: fixed;
+	z-index: 99;
+	top: 64px;
+	right: 12px;
+
+	.c-chip--secondary {
+		display: none;
+	}
+}
+
+.o-flex--scroll-members {
+	position: fixed;
+	z-index: 99;
+	top:12px;
+	left: 12px
+}

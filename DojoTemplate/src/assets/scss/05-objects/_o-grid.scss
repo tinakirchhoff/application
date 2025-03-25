@@ -1,0 +1,39 @@
+@use "../01-tokens" as TOKENS;
+
+$grid-gap: TOKENS.$GLOBAL-SPACING !default;
+
+.o-grid {
+	display: grid;
+	align-items: center;
+	gap: $grid-gap;
+	width: 100%;
+}
+
+.o-grid--half {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.o-grid--third {
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0;
+}
+
+.o-grid--fifth {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.o-grid--center {
+	justify-content: center;
+}
+
+.o-grid__item--left {
+	justify-self: left;
+}
+
+.o-grid__item--right {
+	justify-self: right;
+}
+
+.o-grid--header {
+	grid-template-columns: 4fr 1fr;
+}

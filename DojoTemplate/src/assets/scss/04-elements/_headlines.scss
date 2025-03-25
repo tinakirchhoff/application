@@ -1,0 +1,21 @@
+@use "../01-tokens" as TOKENS;
+
+h1,
+.h1,
+h2,
+.h2 {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+.h1 {
+	font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-BOLD;
+	font-size: TOKENS.$GLOBAL-FONT-SIZE-XL;
+}
+
+h2,
+.h2 {
+	font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-BOLD;
+	font-size: TOKENS.$GLOBAL-FONT-SIZE-L;
+}

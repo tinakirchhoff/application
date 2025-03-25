@@ -1,0 +1,19 @@
+stages:
+- test
+
+testUnit:
+   image: node:20
+   stage: test
+   script:
+     - cd pokemon
+     - npm ci
+     - npm run test:unit
+
+testE2E:
+  image: cypress/browsers:node-22.11.0-chrome-130.0.6723.69-1-ff-132.0-edge-130.0.2849.56-1
+  stage: test
+  script:
+    - cd pokemon
+    - npm ci
+    - npm run test:server
+    - npm run test:e2e

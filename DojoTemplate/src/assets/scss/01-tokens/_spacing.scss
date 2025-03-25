@@ -1,0 +1,18 @@
+//SPACING
+@use 'sass:math';
+
+$GLOBAL-SPACING: 24px !default;
+$GLOBAL-SPACING-L: $GLOBAL-SPACING * 1.5 !default; // 36px
+$GLOBAL-SPACING-XL: $GLOBAL-SPACING * 2 !default; // 48px
+$GLOBAL-SPACING-XXL: 3% !default;
+$GLOBAL-SPACING-S: math.div($GLOBAL-SPACING, 2) !default; // 12px
+$GLOBAL-SPACING-XS: math.div($GLOBAL-SPACING, 4) !default; // 6px
+
+//PAGE-WRAPPER
+$GLOBAL-PAGE-WRAPPER: 2% !default;
+
+//ICON
+$GLOBAL-ICON-SIZE-S: 12px !default;
+$GLOBAL-ICON-SIZE: 16px !default;
+$GLOBAL-ICON-SIZE-L: 24px !default;
+$GLOBAL-ICON-SIZE-XL: 48px !default;

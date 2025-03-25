@@ -1,0 +1,15 @@
+@use "../01-tokens" as TOKENS;
+
+label {
+	font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-BOLDER;
+	color: TOKENS.$GLOBAL-COLOR-PRIMARY;
+}
+
+input {
+	border: 1px solid TOKENS.$GLOBAL-COLOR-SECONDARY;
+	box-shadow: -1px 2px 8px 1px TOKENS.$GLOBAL-COLOR-GREY;
+	outline: none;
+	padding: 6px;
+	width: 100%;
+	box-sizing: border-box;
+}

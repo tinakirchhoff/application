@@ -1,0 +1,86 @@
+@use "../01-tokens" as TOKENS;
+
+//FONT
+$timer-font-family: TOKENS.$GLOBAL-FONT-FAMILY-TIMER !default;
+$timer-font-size: 5rem !default;
+
+//SPACING
+$timer-spacing-xs: TOKENS.$GLOBAL-SPACING-XS !default;
+$timer-spacing-s: TOKENS.$GLOBAL-SPACING-S !default;
+$timer-spacing-l: TOKENS.$GLOBAL-SPACING-L !default;
+
+//STROKE
+$timer-stroke-fill: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+//REFLECTION
+$timer-reflection-color: TOKENS.$GLOBAL-COLOR-DARK !default;
+$timer-reflection-blur: 3px !default;
+$timer-reflection-opacity: 0.2 !default;
+
+//SMALL
+$timer-small-icon-size: TOKENS.$GLOBAL-ICON-SIZE !default;
+$timer-small-icon-color: TOKENS.$GLOBAL-FONT-COLOR !default;
+$timer-small-background-color: TOKENS.$GLOBAL-COLOR-GREY !default;
+$timer-small-border: TOKENS.$GLOBAL-BORDER !default;
+$timer-small-box-shadow: TOKENS.$GLOBAL-BOX-SHADOW !default;
+$timer-small-font-family: TOKENS.$GLOBAL-FONT-FAMILY !default;
+$timer-small-font-size: TOKENS.$GLOBAL-ICON-SIZE !default;
+
+
+.c-timer {
+	position: relative;
+	margin-top: $timer-spacing-l;
+	margin-bottom: $timer-spacing-l;
+	width: 9rem;
+	font-family: $timer-font-family;
+	font-size: $timer-font-size;
+
+	svg {
+		fill: $timer-stroke-fill;
+	}
+}
+
+.c-timer__counter {
+	position: relative;
+	height: fit-content;
+
+	&::after {
+		content: attr(data-text);
+		position: absolute;
+		top: 70%;
+		left: 0;
+		transform: rotate(180deg) scaleX(-1);
+		opacity: $timer-reflection-opacity;
+		mask-image: linear-gradient(0deg, $timer-reflection-color 0%, $timer-reflection-color 100%);
+		filter: blur($timer-reflection-blur);
+	}
+}
+
+.c-timer__stroke {
+	position: absolute;
+	top: -50%;
+	right: -25%;
+	z-index: -99;
+	width: 150%;
+}
+
+.c-timer--small {
+	position: fixed;
+	z-index: 99;
+	top: $timer-spacing-s;
+	right: $timer-spacing-s;
+	margin: 0;
+	box-shadow: $timer-small-box-shadow;
+	border: $timer-small-border;
+	width: fit-content;
+	padding: $timer-spacing-xs;
+	background-color: $timer-small-background-color;
+	font-family: $timer-small-font-family;
+	font-size: $timer-small-font-size;
+
+	.c-timer__icon {
+		width: $timer-small-icon-size;
+		height: $timer-small-icon-size;
+		fill: $timer-small-icon-color;
+	}
+}

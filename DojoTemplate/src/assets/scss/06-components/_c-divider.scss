@@ -1,0 +1,22 @@
+@use "../01-TOKENS" as TOKENS;
+
+$divider-spacing: TOKENS.$GLOBAL-SPACING-S !default;
+$divider-height: 3px !default;
+$divider-color: TOKENS.$GLOBAL-COLOR-SECONDARY !default;
+$divider-full-width: TOKENS.$GLOBAL-PAGE-WRAPPER !default;
+
+.c-divider {
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -3;
+		top: 50%;
+		right: -$divider-full-width;
+		left: -$divider-full-width;
+		display: block;
+		height: $divider-height;
+		background-color: $divider-color;
+	}
+}

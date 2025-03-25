@@ -1,0 +1,56 @@
+@use "../01-TOKENS" as TOKENS;
+
+//FONT
+$nav-font-weight: TOKENS.$GLOBAL-FONT-WEIGHT-BOLDER !default;
+$nav-font-color: TOKENS.$GLOBAL-FONT-COLOR !default;
+
+//SPACING
+$nav-spacing: TOKENS.$GLOBAL-SPACING !default;
+
+//TRANSITION
+$nav-transition-time: 400ms !default;
+$nav-start-opacity: 0.8 !default;
+$nav-end-opacity: 1 !default;
+$nav-underline-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+.c-nav {
+	justify-self: right;
+}
+
+.c-nav__list {
+	display: flex;
+	align-items: center;
+	gap: $nav-spacing;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.c-nav__link {
+	position: relative;
+	opacity: $nav-start-opacity;
+	font-weight: $nav-font-weight;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $nav-font-color;
+
+	&:before {
+		content: url("data:image/svg+xml, %3Csvg id='stroke' viewBox='0 0 187 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 2.5L187 0L182 7.5L0 4L14 2.5Z' fill='%23D82C4B'/%3E%3C/svg%3E");
+		position: absolute;
+		z-index: -99;
+		display: block;
+		bottom: 15%;
+		left: -10%;
+		transition: $nav-transition-time;
+		width: 0;
+		fill: $nav-underline-color;
+	}
+
+	&:hover {
+		opacity: $nav-end-opacity;
+
+		&:before {
+			width: 120%;
+		}
+	}
+}

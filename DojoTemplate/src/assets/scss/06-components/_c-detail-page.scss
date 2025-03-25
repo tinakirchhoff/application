@@ -1,0 +1,42 @@
+@use "../01-tokens" as TOKENS;
+
+$detail-page-spacing-s: TOKENS.$GLOBAL-SPACING-S !default;
+$detail-page-spacing: TOKENS.$GLOBAL-SPACING !default;
+$detail-page-spacing-l: TOKENS.$GLOBAL-SPACING-XXL !default;
+$detail-page-spacing-xl: 5% !default;
+$detail-page-content-spacing: $detail-page-spacing $detail-page-spacing $detail-page-spacing-xl $detail-page-spacing-xl !default;
+
+.c-detail-page {
+	position: relative;
+	padding-left: $detail-page-spacing-l;
+	height: fit-content;
+}
+
+.c-detail-page__start {
+	display: flex;
+	align-items: center;
+	gap: $detail-page-spacing;
+}
+
+.c-detail-page__content {
+	align-self: start;
+	padding: $detail-page-content-spacing;
+}
+
+.c-detail-page__list {
+	padding: $detail-page-spacing;
+}
+
+.c-detail-page__text {
+	padding-bottom: $detail-page-spacing-s;
+}
+
+.c-detail-page__img {
+	height: 50vh;
+
+	img {
+		object-fit: contain;
+		width: 100%;
+		height: 100%;
+	}
+}

@@ -1,0 +1,56 @@
+@use "../01-TOKENS" as TOKENS;
+
+$how-to-line-height: 1.2;
+$how-to-section-spacing: 0 3% !default;
+$how-to-spacing-s: TOKENS.$GLOBAL-SPACING-S !default;
+$how-to-spacing: TOKENS.$GLOBAL-SPACING !default;
+$how-to-spacing-l: TOKENS.$GLOBAL-SPACING-L !default;
+
+//Icon
+$how-to-icon-width: TOKENS.$GLOBAL-ICON-SIZE-L !default;
+$how-to-icon-height: TOKENS.$GLOBAL-ICON-SIZE-S !default;
+$how-to-icon-color: TOKENS.$GLOBAL-COLOR-PRIMARY !default;
+
+.c-how-to {
+	padding: $how-to-section-spacing;
+	line-height: $how-to-line-height;
+}
+
+.c-how-to__headline {
+	display: flex;
+	align-items: center;
+	gap: $how-to-spacing;
+	margin-bottom: $how-to-spacing-l;
+}
+
+.c-how-to__contentBlock {
+	margin-bottom: $how-to-spacing;
+}
+
+.c-how-to__list {
+	list-style: none;
+}
+
+.c-how-to__list-item {
+	display: flex;
+}
+
+.c-how-to__list-item-icon {
+	width: $how-to-icon-width;
+	height: $how-to-icon-height;
+	fill: $how-to-icon-color;
+}
+
+.c-how-to__list-in-list {
+	padding: $how-to-spacing-s 0 $how-to-spacing-s $how-to-spacing-l;
+}
+
+.c-how-to__img {
+	justify-self: center;
+	align-self: start;
+	width: auto;
+}
+
+.c-how-to__list-in-list-item {
+	list-style: none;
+}

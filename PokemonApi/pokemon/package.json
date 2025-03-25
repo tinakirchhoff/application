@@ -1,0 +1,43 @@
+{
+  "name": "pokemon",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "build-only": "vite build",
+    "test:e2e": "cypress run --browser chrome",
+    "test:server": "vite --host & wait-on -v tcp:5173"
+  },
+  "devDependencies": {
+    "pinia": "^2.2.6",
+    "vue": "^3.5.12",
+    "vue-router": "^4.5.0",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.9.0",
+    "@vitejs/plugin-vue": "^5.2.0",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.5.1",
+    "@vueuse/core": "^12.0.0",
+    "cypress": "^13.16.0",
+    "jsdom": "^25.0.1",
+    "msw": "^2.6.6",
+    "npm-run-all2": "^7.0.1",
+    "sass-embedded": "^1.81.0",
+    "start-server-and-test": "^2.0.8",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.10",
+    "vite-plugin-vue-devtools": "^7.5.4",
+    "vitest": "^2.1.4",
+    "vue-tsc": "^2.1.10",
+    "wait-on": "^8.0.1",
+    "stylelint": "^16.5.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-scss": "^6.2.1"
+  }
+}

@@ -1,0 +1,8 @@
+@use "../01-tokens" as TOKENS;
+
+$section-spacing: TOKENS.$GLOBAL-SPACING-L !default;
+
+.o-section {
+	padding-top: $section-spacing;
+	padding-bottom: $section-spacing;
+}
